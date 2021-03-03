@@ -1,8 +1,12 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Postlist from "../components/Postlist";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-   <div>Hello use Memo</div>
-  )
+    <div>
+      <h1>Hello use Memo</h1>
+      <Postlist />
+    </div>
+  );
 }
