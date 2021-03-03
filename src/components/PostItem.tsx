@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styles from "../styles/Home.module.css";
 
 export interface Post {
@@ -21,4 +21,8 @@ const PostItem = ({ post }: PostProps) => {
   );
 };
 
-export default PostItem;
+export default memo(PostItem);
+
+// memorizar um  valor -> useMemo
+// memorizar uma função -> useCallback
+// memorizar um  componente -> React.memo
