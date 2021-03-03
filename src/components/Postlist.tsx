@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
-
-interface Post {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
+import styles from "../styles/Home.module.css";
+import PostItem, { Post } from "./PostItem";
 
 const Postlist = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -21,10 +16,7 @@ const Postlist = () => {
   return (
     <div>
       {posts.map((post) => (
-        <div>
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
-        </div>
+        <PostItem post={post} key={post.id} />
       ))}
     </div>
   );
